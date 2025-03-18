@@ -24,8 +24,8 @@ function showTasks() {
   myItemList.forEach((item, index) => {
     newLi = newLi + `
     
-        <li class="tasks">
-          <img src="./img/checked.png" alt="check-na-tarefa">
+        <li class="tasks ${item.done && "done"}">
+          <img src="./img/checked.png" alt="check-na-tarefa" onclick="doneTask(${index})">
           <p>${item.task}</p>
           <img src="./img/trash.png" alt="tarefa-para-o-lixo" onclick="deleteItem(${index})">
         </li>
@@ -39,9 +39,10 @@ function showTasks() {
 }
 
 
-function taskDone() {
+function doneTask(index) {
+  myItemList[index].done = !myItemList[index].done
 
-
+  showTasks()
 }
 
 
