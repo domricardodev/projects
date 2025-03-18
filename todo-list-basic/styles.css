@@ -5,6 +5,8 @@
 
   font-family: "Roboto", sans-serif;
 
+  outline: none;
+
 }
 
 body {
@@ -21,7 +23,61 @@ body {
   margin-right: auto;
 }
 
+.input-task {
+  border: none;
+  border-radius: 6px;
+  width: 300px;
+  height: 40px;
+  padding-left: 10px;
+}
+
+.button-add-task {
+  border: none;
+  border-radius: 5px;
+  height: 40px;
+  background-color: #003329;
+  color: #ffffff;
+  font-size: 17px;
+  padding: 0 15px;
+  float: right;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.button-add-task:hover {
+  opacity: 0.8;
+}
+
+.button-add-task:active {
+  opacity: 0.6;
+}
+
+.list-tasks {
+  width: 100%;
+  list-style: none;
+  margin-top: 30px;
+}
+
+.tasks {
+  background-color: #F2F2F2f2;
+  box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.2);
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+  border-radius: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+
+}
 
 img {
   height: 25px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.tasks:hover img {
+  opacity: 1;
 }
