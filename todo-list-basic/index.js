@@ -36,6 +36,9 @@ function showTasks() {
   // innerHTML permite add o que quiser no HTML
   completeList.innerHTML = newLi;
 
+  // salva dados no local storage do navegador
+  localStorage.setItem('list', JSON.stringify(myItemList))
+
 }
 
 
@@ -48,8 +51,20 @@ function doneTask(index) {
 
 function deleteItem(index) {
   myItemList.splice(index, 1);
-  showTasks();
+  showTasks()
 }
+
+function reloadTasks() {
+  const localStorageTasks = localStorage.getItem('list')
+
+  if (localStorageTasks) {
+    myItemList = JSON.parse(localStorageTasks)
+  }
+
+  showTasks()
+}
+
+reloadTasks()
 
 // addEventListener fica de olho nas interacões com o botão, como declarado abaixo, no click do botão.
 // E chama a função declarada acima para adicionar nova tarefa.
