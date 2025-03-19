@@ -12,8 +12,8 @@
 body {
   height: 100vh;
   /* Define a altura do body como 100% da altura da tela */
-  background: linear-gradient(to right bottom, #235513, #2456e3) fixed;
-  /* Cria um gradiente de fundo fixo */
+  background: url("./img/background.jpg");
+  /* Adciona imagem para o background */
 }
 
 /* Estiliza o container principal */
@@ -31,10 +31,10 @@ body {
   top: 50%;
   /* Posiciona o container no meio verticalmente */
   left: 50%;
-  /* Posiciona o container no meio horizontalmente */
-  box-shadow: 15px 30px 35px rgba(0, 0, 0, 1);
+  /* Posiciona o container no meio horizontalmente (sombra y, compra x, difusão da sombra)*/
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 1);
   /* Adiciona uma sombra ao container */
-  border-radius: 10px;
+  border-radius: 30px;
   /* Arredonda as bordas do container */
   -webkit-perspective: 300px;
   /* Define a perspectiva para efeitos 3D (para navegadores WebKit) */
@@ -44,9 +44,11 @@ body {
 
 /* Estiliza a área de estatísticas (contadores de cara e coroa) */
 .stats {
-  text-align: right;
+  font-family: "Roboto", sans-serif;
+
+  text-align: center;
   /* Alinha o texto à direita */
-  color: #101020;
+  color: #2b2b2b;
   /* Define a cor do texto */
   font-weight: 500;
   /* Define o peso da fonte */
@@ -107,13 +109,14 @@ body {
 
 /* Estiliza os botões */
 button {
+
   width: 120px;
   /* Define a largura dos botões */
   padding: 10px 0;
   /* Adiciona espaçamento interno nos botões */
-  border: 2.5px solid #235513;
+  border: 2px solid #b5a300;
   /* Adiciona uma borda aos botões */
-  border-radius: 5px;
+  border-radius: 20px;
   /* Arredonda as bordas dos botões */
   cursor: pointer;
   /* Muda o cursor para uma mãozinha ao passar sobre os botões */
@@ -121,7 +124,7 @@ button {
 
 /* Estiliza o botão "Girar Moeda" */
 #flip-button {
-  background: #235513;
+  background: #ffd000;
   /* Define a cor de fundo do botão */
   color: #101020;
   /* Define a cor do texto do botão */
@@ -129,11 +132,11 @@ button {
 
 /* Estiliza o botão "Girar Moeda" quando desabilitado */
 #flip-button:disabled {
-  background: #e1e0ee;
+  background: #bbbbbb;
   /* Define a cor de fundo do botão desabilitado */
   color: #101020;
   /* Define a cor do texto do botão desabilitado */
-  border-color: #235513;
+  border-color: #717171;
   /* Define a cor da borda do botão desabilitado */
 }
 
