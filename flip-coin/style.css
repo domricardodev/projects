@@ -44,6 +44,8 @@ body {
 
 /* Estiliza a área de estatísticas (contadores de cara e coroa) */
 .stats {
+
+  /* altera a font de exibição do placar*/
   font-family: "Roboto", sans-serif;
 
   text-align: center;
@@ -110,7 +112,7 @@ body {
 /* Estiliza os botões */
 button {
 
-  width: 120px;
+  width: 148px;
   /* Define a largura dos botões */
   padding: 10px 0;
   /* Adiciona espaçamento interno nos botões */
@@ -134,7 +136,7 @@ button {
 #flip-button:disabled {
   background: #bbbbbb;
   /* Define a cor de fundo do botão desabilitado */
-  color: #101020;
+  color: #717171;
   /* Define a cor do texto do botão desabilitado */
   border-color: #717171;
   /* Define a cor da borda do botão desabilitado */
@@ -142,9 +144,10 @@ button {
 
 /* Estiliza o botão "Resetar" */
 #reset-button {
+
   background: #fff;
   /* Define a cor de fundo do botão */
-  color: #235513;
+  color: #717171;
   /* Define a cor do texto do botão */
 }
 
