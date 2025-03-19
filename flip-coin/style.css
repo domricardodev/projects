@@ -1,107 +1,172 @@
+/* Define regras gerais para todos os elementos da página */
 * {
   margin: 0;
+  /* Remove margens padrão */
   padding: 0;
+  /* Remove espaçamentos internos padrão */
   box-sizing: border-box;
+  /* Faz com que o padding e a borda sejam incluídos no tamanho total do elemento */
 }
 
+/* Estiliza o corpo da página (body) */
 body {
-  height: 100;
+  height: 100vh;
+  /* Define a altura do body como 100% da altura da tela */
   background: linear-gradient(to right bottom, #235513, #2456e3) fixed;
+  /* Cria um gradiente de fundo fixo */
 }
 
+/* Estiliza o container principal */
 .container {
   background: #fff;
+  /* Define o fundo do container como branco */
   width: 400px;
+  /* Define a largura do container */
   padding: 50px;
+  /* Adiciona um espaçamento interno de 50px */
   position: absolute;
+  /* Posiciona o container de forma absoluta na página */
   transform: translate(-50%, -50%);
+  /* Move o container para o centro da tela */
   top: 50%;
+  /* Posiciona o container no meio verticalmente */
   left: 50%;
+  /* Posiciona o container no meio horizontalmente */
   box-shadow: 15px 30px 35px rgba(0, 0, 0, 1);
+  /* Adiciona uma sombra ao container */
   border-radius: 10px;
+  /* Arredonda as bordas do container */
   -webkit-perspective: 300px;
+  /* Define a perspectiva para efeitos 3D (para navegadores WebKit) */
   perspective: 300px;
+  /* Define a perspectiva para efeitos 3D */
 }
 
+/* Estiliza a área de estatísticas (contadores de cara e coroa) */
 .stats {
   text-align: right;
+  /* Alinha o texto à direita */
   color: #101020;
+  /* Define a cor do texto */
   font-weight: 500;
+  /* Define o peso da fonte */
   line-height: 25px;
+  /* Define a altura da linha */
 }
 
+/* Estiliza a moeda */
 .coin {
   height: 150px;
+  /* Define a altura da moeda */
   width: 150px;
+  /* Define a largura da moeda */
   position: relative;
+  /* Define o posicionamento como relativo */
   margin: 50px auto;
+  /* Centraliza a moeda horizontalmente e adiciona margem */
   -webkit-transform-style: preserve-3d;
+  /* Preserva o estilo 3D (para navegadores WebKit) */
   transform-style: preserve-3d;
+  /* Preserva o estilo 3D */
 }
 
+/* Estiliza o lado "coroa" da moeda */
 .tails {
   transform: rotateX(180deg);
+  /* Rotaciona o lado "coroa" em 180 graus no eixo X */
 }
 
+/* Estiliza a área dos botões */
 .button {
   display: flex;
+  /* Usa o modelo de layout flexível */
   justify-content: space-between;
+  /* Distribui os botões com espaço entre eles */
 }
 
+/* Estiliza as imagens dentro da moeda */
 .coin img {
   width: 145px;
+  /* Define a largura das imagens */
 }
 
+/* Estiliza os lados "cara" e "coroa" da moeda */
 .heads,
 .tails {
   position: absolute;
+  /* Posiciona os lados de forma absoluta */
   width: 100%;
+  /* Define a largura como 100% do contêiner pai */
   height: 100%;
+  /* Define a altura como 100% do contêiner pai */
   backface-visibility: hidden;
+  /* Esconde a parte de trás dos lados da moeda */
   -webkit-backface-visibility: hidden;
+  /* Esconde a parte de trás dos lados da moeda (para navegadores WebKit) */
 }
 
+/* Estiliza os botões */
 button {
   width: 120px;
+  /* Define a largura dos botões */
   padding: 10px 0;
+  /* Adiciona espaçamento interno nos botões */
   border: 2.5px solid #235513;
+  /* Adiciona uma borda aos botões */
   border-radius: 5px;
+  /* Arredonda as bordas dos botões */
   cursor: pointer;
+  /* Muda o cursor para uma mãozinha ao passar sobre os botões */
 }
 
+/* Estiliza o botão "Girar Moeda" */
 #flip-button {
   background: #235513;
-  color: #101020
-}
-
-#flip-button-disabled {
-  background: #e1e0ee;
+  /* Define a cor de fundo do botão */
   color: #101020;
-  border-color: #235513;
+  /* Define a cor do texto do botão */
 }
 
+/* Estiliza o botão "Girar Moeda" quando desabilitado */
+#flip-button:disabled {
+  background: #e1e0ee;
+  /* Define a cor de fundo do botão desabilitado */
+  color: #101020;
+  /* Define a cor do texto do botão desabilitado */
+  border-color: #235513;
+  /* Define a cor da borda do botão desabilitado */
+}
+
+/* Estiliza o botão "Resetar" */
 #reset-button {
   background: #fff;
+  /* Define a cor de fundo do botão */
   color: #235513;
+  /* Define a cor do texto do botão */
 }
 
+/* Define a animação para o lado "coroa" da moeda */
 @keyframes spin-tails {
   0% {
     transform: rotateX(0);
+    /* Começa sem rotação */
   }
 
   100% {
-    transform: rotateX(1980deg)
+    transform: rotateX(1980deg);
+    /* Termina com uma rotação de 1980 graus no eixo X */
   }
 }
 
-
+/* Define a animação para o lado "cara" da moeda */
 @keyframes spin-heads {
   0% {
     transform: rotateX(0);
+    /* Começa sem rotação */
   }
 
   100% {
-    transform: rotateX(2168deg)
+    transform: rotateX(2160deg);
+    /* Termina com uma rotação de 2160 graus no eixo X */
   }
 }
