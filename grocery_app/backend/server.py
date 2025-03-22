@@ -1,5 +1,7 @@
 from flask import Flask, request, jsonify
 from sql_connection import get_sql_connection
+import mysql.connector
+import json
 
 import products_dao
 import uom_dao
@@ -10,10 +12,10 @@ connection = get_sql_connection()
 
 @app.route('/getUOM', methods=['GET'])
 def get_uom():
-  response = uom_dao.get_uoms(connection)
-  response = jsonify(response)
-  response.headers.add('Access-Control-Allow-Origin', '*')
-  return response
+    response = uom_dao.get_uoms(connection)
+    response = jsonify(response)
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    return response
 
 
 @app.route('/getProducts', methods=['GET'])

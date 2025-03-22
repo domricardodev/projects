@@ -1,7 +1,7 @@
 
 def get_uoms(connection):
     cursor = connection.cursor()
-    query = ("select * from uom")
+    query = ("SELECT * FROM uom_table")
     cursor.execute(query)
     response = []
     for (uom_id, uom_name) in cursor:
@@ -18,4 +18,3 @@ if __name__ == '__main__':
     connection = get_sql_connection()
     # print(get_all_products(connection))
     print(get_uoms(connection))
-
